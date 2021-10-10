@@ -4,9 +4,9 @@ import java.util.Objects;
 
 public class ProductDTO {
     private final String name;
-    private final int price;
+    private final long price;
 
-    public ProductDTO(String name, int price) {
+    public ProductDTO(String name, long price) {
         this.name = name;
         this.price = price;
     }
@@ -15,7 +15,7 @@ public class ProductDTO {
         return name;
     }
 
-    public int getPrice() {
+    public long getPrice() {
         return price;
     }
 

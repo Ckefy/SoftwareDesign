@@ -16,20 +16,27 @@ public class HTMLPrinter {
         this.printWriter.println("<html><body>");
         for (ProductDTO product: productList) {
             String name = product.getName();
-            int price = product.getPrice();
+            long price = product.getPrice();
             this.printWriter.println(name + "\t" + price + "</br>");
         }
         this.printWriter.println("</body></html>");
     }
 
-    public void printWithInfo(ProductDTO product, String info) {
+    public void printProductFull(ProductDTO product, String info) {
         this.printWriter.println("<html><body>");
         this.printWriter.println("<h1>" + info + "</h1>");
         if (product != null) {
             String name = product.getName();
-            int price = product.getPrice();
+            long price = product.getPrice();
             this.printWriter.println(name + "\t" + price + "</br>");
         }
+        this.printWriter.println("</body></html>");
+    }
+
+    public void printProductInfo(Object value, String info) {
+        this.printWriter.println("<html><body>");
+        this.printWriter.println(info);
+        this.printWriter.println(value);
         this.printWriter.println("</body></html>");
     }
 }

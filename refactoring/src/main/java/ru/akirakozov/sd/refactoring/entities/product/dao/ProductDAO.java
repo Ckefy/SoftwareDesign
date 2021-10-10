@@ -54,7 +54,7 @@ public class ProductDAO {
         return listDTO.get(0);
     }
 
-    public int getSum() throws SQLException {
+    public long getSum() throws SQLException {
         String query = "SELECT SUM(price) AS total FROM PRODUCT";
         ResultSet resultSet = executeQuery(query);
         return resultSet.getInt("total");
@@ -69,7 +69,7 @@ public class ProductDAO {
     public void insert(ProductDTO productDTO) {
         try (Statement statement = SQLDatabase.getConnection().createStatement()) {
             String name = productDTO.getName();
-            int price = productDTO.getPrice();
+            long price = productDTO.getPrice();
             String query = "INSERT INTO PRODUCT" +
                            "(NAME, PRICE) VALUES" +
                            "(\"" + name + "\"," + price + ")";
