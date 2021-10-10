@@ -1,4 +1,4 @@
-package ru.akirakozov.sd.refactoring.dto;
+package ru.akirakozov.sd.refactoring.entities.product.dto;
 
 import java.util.Objects;
 

@@ -1,7 +1,7 @@
-package ru.akirakozov.sd.refactoring.dao;
+package ru.akirakozov.sd.refactoring.entities.product.dao;
 
 import ru.akirakozov.sd.refactoring.DB.SQLDatabase;
-import ru.akirakozov.sd.refactoring.dto.ProductDTO;
+import ru.akirakozov.sd.refactoring.entities.product.dto.ProductDTO;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
