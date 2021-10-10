@@ -2,11 +2,11 @@ package ru.akirakozov.sd.refactoring.dto;
 
 import java.util.Objects;
 
-public class ItemDTO {
+public class ProductDTO {
     private final String name;
     private final int price;
 
-    public ItemDTO(String name, int price) {
+    public ProductDTO(String name, int price) {
         this.name = name;
         this.price = price;
     }
@@ -27,7 +27,7 @@ public class ItemDTO {
         if (obj == null || obj.getClass() != this.getClass()) {
             return false;
         }
-        ItemDTO item = (ItemDTO) obj;
+        ProductDTO item = (ProductDTO) obj;
         return item.price == this.price && Objects.equals(item.name, this.name);
     }
 
